@@ -15,6 +15,15 @@
 
 html { -webkit-text-size-adjust: 100%; }
 
+/* Remove o destaque quadrado do toque no celular */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; /* iOS: sem prévia de link ao segurar */
+  -webkit-user-select: none;
+  user-select: none;
+}
+a:focus:not(:focus-visible), button:focus:not(:focus-visible) { outline: none; }
+
 body {
   min-height: 100dvh;
   font-family: "DM Sans", system-ui, -apple-system, sans-serif;

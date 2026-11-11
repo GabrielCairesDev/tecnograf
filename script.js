@@ -26,3 +26,9 @@ document.getElementById("share").addEventListener("click", async () => {
     }
   } catch (_) { /* usuário cancelou */ }
 });
+
+// Celular: ao segurar um botão, não abre o menu do navegador
+// (que desenha um destaque quadrado em volta do botão)
+document.querySelectorAll(".btn, .socials a, .socials button").forEach((el) => {
+  el.addEventListener("contextmenu", (e) => e.preventDefault());
+});
